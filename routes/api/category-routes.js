@@ -45,8 +45,8 @@ router.post('/', (req, res) => {
       category_name: "Sports",
     }
   */
-    Category.create(req.body)
-    .then((product) => {res.status(200).json(product);})
+  Category.create(req.body)
+    .then((category) => { res.status(200).json(category); })
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
@@ -55,6 +55,16 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
+  Category.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((updatedCategory) => res.json(updatedCategory))
+    .catch((err) => {
+      // console.log(err);
+      res.status(400).json(err);
+    });
 });
 
 router.delete('/:id', (req, res) => {
