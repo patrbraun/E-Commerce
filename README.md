@@ -14,7 +14,7 @@
 
 ## Usage
 
-Video
+https://drive.google.com/file/d/1sL3WMQsKcJcaawouFpRMtXEYH0-6QIh5/view?usp=sharing
 
   -In the root folder run the following command. Then provide requests in insomnia, following the usage video.
     
